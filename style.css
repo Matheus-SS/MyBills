@@ -1,0 +1,24 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: linear-gradient(to right,#000428,#004e92);
+    padding-bottom: 30px;
+}
+.upArrow{
+    font-size: 30px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    color: #000;
+    cursor: pointer;
+    z-index: 9999;
+}
+.message{
+    display: none;
+    color: red;
+    transition: 1s linear;
+}
+.delete{
+    cursor: pointer;
+}

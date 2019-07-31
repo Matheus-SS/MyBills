@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.6/css/mdb.min.css" rel="stylesheet">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script/jquery.js"></script>
+    <script src="script/bootstrap.js"></script>
+    <script src="script/maskMoney.js"></script>
+    <title>My Bills</title>
+</head>
+
+<body>
+    <!-- ARROW ON THE BOTTOM -->
+    <div>
+        <i class="fas fa-arrow-circle-up upArrow"></i>
+    </div>
+        
+    <!-- TITLE -->
+    <header>
+        <div class="container mt-3 mb-3">
+            <h1 class="text-center text-white h1">
+                My Bills
+            </h1>
+        </div>
+    </header>
+
+    <!--My Wallet-->
+    <div class="container mb-3">
+        <div class="text-white h5">
+           <span>Wallet: $</span> 
+            <span class="myWallet">1,000.00</span>
+        </div>
+    </div>
+    <!-- END My Wallet-->
+
+    <!-- FORM WALLET -->
+    <div class="container">
+        <form class="formWallet mb-3" id="formWallet">
+            <div class="md-form">
+                <input type="tel" id="walletValue" name="walletValue" class="form-control text-white col-10">
+                <label for="walletValue" class="text-white">Wallet Value</label>
+            </div>
+
+            <div>
+                <input type="button" id="add" value="Add" class="btn blue-gradient font-weight-bold">
+                <input type="button" id="update" value="Update" class="btn aqua-gradient font-weight-bold">
+            </div>
+        </form>
+    </div>
+    <!--END  FORM WALLET -->
+
+    <!-- FORM ADD BILLS -->
+        <div class="container">
+            <div class="card form-white container">
+                <form id="formBill" style="margin-top:5px">
+                    <div class="md-form">
+                        <input type="text" id="billTitle" name="billTitle" class="form-control" maxlength="15" required>
+                        <label for="billTitle">Bill title</label>
+                        <p class="message">must only have numbers,letters or underscore</p>
+                    </div>
+
+                    <div class="md-form">
+                        <input type="tel" id="billValue" name="billValue" class="form-control">
+                        <label for="billValue">Bill value</label>
+                    </div>
+
+                    <div class="text-right">
+                        <input type="submit" class="btn blue-gradient" value="Save" />
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    <!-- END FORM ADD BILLS -->
+
+    <!-- LIST BILLS -->
+        <div class="container mt-4 mb-4">
+            <ul class="list-group" id="listBill">
+            </ul>
+
+            <div>
+                <button type="button" class="btn btn-info font-weight-bold" id="buttonDebt" style="margin:0px">calculate debt</button>
+            </div>
+        
+        </div>
+   <!--END LIST BILLS -->
+
+   <!-- DEBTS -->
+        <div class="container">
+            <div class="card">
+                <div class="card-body" id="card-myDebts">
+                    <h4 class="card-tile">My Debts</h4>
+                    
+                </div>
+            </div>
+        </div>
+<!-- DEBTS -->
+
+<!-- FOOTER -->
+    <footer class="mt-4">
+        <div class="footer-copyright text-center py-3 text-white">
+            Developed by Matheus Santos © 2019
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js"></script>
+    <script src="script/app.js"></script>
+</body>
+
+</html>
